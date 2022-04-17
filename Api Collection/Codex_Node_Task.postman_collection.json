@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "b6f2ca1c-c53a-4e37-83cb-9f4a1de1a70f",
+		"name": "Codex_Node_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User_Shopping_Preference",
+			"item": [
+				{
+					"name": "Create Preference",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"PreferenceName\":\"Software\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/preference/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preference",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all preference",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/preference/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preference",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific preference",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/preference/single?id=625a923338a1d96a3cab3fea",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preference",
+								"single"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "625a923338a1d96a3cab3fea"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImhhcmRpa3BuaXJhbmphbmlAZ21haWwuY29tIiwiaWF0IjoxNjUwMjEwNDI1LCJleHAiOjE2NTAyMTEzMjV9.OVKN7jK5eCVeR2gd22Db4FgY3NYJQmlVcfnnRk1Jo_Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FullName\":\"Hardik Niranjani\",\r\n    \"Email\":\"hardikpniranjani@gmail.com\",\r\n    \"Password\":\"12345\",\r\n    \"DateOfBirth\":\"11-11-2021\",\r\n    \"UserShopping\":[]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/signup/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImhhcmRpa3BuaXJhbmphbmlAZ21haWwuY29tIiwiaWF0IjoxNjUwMjEwNDI1LCJleHAiOjE2NTAyMTEzMjV9.OVKN7jK5eCVeR2gd22Db4FgY3NYJQmlVcfnnRk1Jo_Y",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"signup",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImhhcmRpa3BuaXJhbmphbmlAZ21haWwuY29tIiwiaWF0IjoxNjUwMjEwNDI1LCJleHAiOjE2NTAyMTEzMjV9.OVKN7jK5eCVeR2gd22Db4FgY3NYJQmlVcfnnRk1Jo_Y"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User shopping Preference",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVjMzc4YTY5NDkwMjdmOTQ1Y2JlNWYiLCJpYXQiOjE2NTAyMTEzMjEsImV4cCI6MTY1MDQyNzMyMX0.m9dmmXTY-xfxjNBTHopKmaolYhP9i78njz7NDxPYJ6I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/addpreference?preference_id=625a924c38a1d96a3cab3fee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"addpreference"
+							],
+							"query": [
+								{
+									"key": "preference_id",
+									"value": "625a924c38a1d96a3cab3fee"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"hardikpniranjani@gmail.com\",\r\n    \"Password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mail Verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"hardikpniranjani@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/signupEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"signupEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"hardikpniranjani@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImhhcmRpa3BuaXJhbmphbmlAZ21haWwuY29tIiwiaWF0IjoxNjUwMjExMDIwLCJleHAiOjE2NTAyMTE5MjB9.JAhUGy3cJQMgCWCkpYAmLRU3rwxVOglY-uAFcAiCbFw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/changePassword/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImhhcmRpa3BuaXJhbmphbmlAZ21haWwuY29tIiwiaWF0IjoxNjUwMjExMDIwLCJleHAiOjE2NTAyMTE5MjB9.JAhUGy3cJQMgCWCkpYAmLRU3rwxVOglY-uAFcAiCbFw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"changePassword",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImhhcmRpa3BuaXJhbmphbmlAZ21haWwuY29tIiwiaWF0IjoxNjUwMjExMDIwLCJleHAiOjE2NTAyMTE5MjB9.JAhUGy3cJQMgCWCkpYAmLRU3rwxVOglY-uAFcAiCbFw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
